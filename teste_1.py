@@ -22,8 +22,6 @@ def analyze_movies(movie_ids):
         data = get_movie_data(movie_id)
         credits = get_movie_credits(movie_id)
 
-        # print(f"Resposta da API para o filme ID {movie_id}: {data}")
-
         # Processa os gêneros
         for genre in data.get('genres', []):
             genre_count[genre['name']] += 1
